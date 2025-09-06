@@ -12,8 +12,11 @@ async function scrapeDoctolib() {
     const userDataDir = path.join(__dirname, 'user_data');
    
     // Clear browser data if clearSession is true
-    if (clearSession) {
-      console.log('🧹 Clearing browser session data for fresh login...');
+    if (clearSession) 
+      console.log('🧹 Clearing browser session data for fresh login...');@
+
+
+    
       try {
         if (fs.existsSync(userDataDir)) {
           fs.rmSync(userDataDir, { recursive: true, force: true });
@@ -156,10 +159,7 @@ async function scrapeDoctolib() {
         }
 
         // --- Perform Login with PIN Support ---
-        const DOCTOLIB_USERNAME = 'doclmy@hotmail.com'; // Replace with your username
-        const DOCTOLIB_PASSWORD = 'doclmydocto'; // Replace with your password
-        const DOCTOLIB_PIN = '5678'; // Replace with your 4-digit PIN
-       
+      
         console.log('Analyzing login form structure...');
        
         // Check for PIN input fields first
